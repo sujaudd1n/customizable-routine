@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Routine</title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      :root{
+
+        --re:#ee4444;
+        --lore:#ee444433;
+        --mlore:#ee444411;
+
+        --gr:#44ee44;
+        --logr:#44ee4433;
+        --mlogr:#44ee4411;
+
+        --bl:#4483ee;
+        --lobl:#4483ee33;
+        --mlobl:#4483ee11;
+
+        --ye:#eeee44;
+        --loye:#eeee4433;
+        --mloye:#eeee4411;
+
+        --ocbl:#44eeee;
+        --loocbl:#44eeee33;
+        --mloocbl:#44eeee11;
+
+        --vi:#444eee;
+        --lovi:#444eee33;
+        --mlovi:#444eee11;
+
+        --pi:#ee44aa;
+        --lopi:#ee44aa33;
+        --mlopi:#ee44aa11;
+
+        --wh:#cfcfcf;
+        --lowh:#cfcfcf33;
+        --mlowh:#cfcfcf11;
+
+        --bla:#000;
+        --lobla:#00000033;
+        --mlobla:#00000011;
+
+
+        --co:var(--bl);
+        --loco:var(--lobl);
+        --mloco:var(--mlobl);
+        --bgcl:#111116;
+      }
+      ::selection{
+        background: var(--loco);
+        color:var(--co);
+      }
+      body{
+        background:var(--bgcl);
+        color:var(--co);
+        font-family:'Tlwg Typewriter';
+      }
+      .rt{
+        margin:20px 0;
+      }
+      table{
+        border:2px solid;
+        border-collapse:collapse;
+        width:inherit;
+        overflow:hidden;
+        margin:auto;
+      }
+      th,td{
+        border:1px solid;
+        padding:8px 20px;
+      }
+      th{
+        background:var(--loco);
+      }
+      tbody tr:nth-child(even) td{
+        background:var(--mloco);
+      }
+      thead tr:first-child th{
+        border-bottom:2px solid;
+      }
+      th:first-child{
+        border-right:2px solid;
+      }
+      caption{
+        padding:5px;
+        font-size:2rem
+      }
+      p{
+        margin:50px;
+        text-align:center;
+        }
+      .btn{
+        padding:5px 15px;
+        border:none;
+        color:var(--bgcl);
+        display:block;
+        font-family:'Tlwg Typewriter';
+      }
+      .rebtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--re) 85%,var(--re) 100%);
+      }
+      .grbtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--gr) 85%,var(--gr) 100%);
+      }
+      .blbtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--bl) 85%,var(--bl) 100%);
+      }
+      .yebtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--ye) 85%,var(--ye) 100%);
+      }
+      .ocblbtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--ocbl) 85%,var(--ocbl) 100%);
+      }
+      .vibtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--vi) 85%,var(--vi) 100%);
+      }
+      .pibtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--pi) 85%,var(--pi) 100%);
+      }
+      .whbtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--wh) 85%,var(--wh) 100%);
+      }
+      .blabtn{
+        background: linear-gradient(180deg,var(--co) 0%,var(--co) 85%,var(--bla) 85%,var(--bla) 100%);
+      }
+      .btn:hover{
+        box-shadow: inset 0 0 5px 1px var(--lobla);
+      }
+      .bse{
+        display:flex;
+        justify-content:center;
+      }
+    </style>
+    <script type="text/javascript">
+      function cctre(){
+        document.documentElement.style.setProperty('--co', 'var(--re)');
+        document.documentElement.style.setProperty('--loco', 'var(--lore)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlore)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--re)';
+      }
+      function cctgr(){
+        document.documentElement.style.setProperty('--co', 'var(--gr)');
+        document.documentElement.style.setProperty('--loco', 'var(--logr)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlogr)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--gr)';
+      }
+      function cctbl(){
+        document.documentElement.style.setProperty('--co', 'var(--bl)');
+        document.documentElement.style.setProperty('--loco', 'var(--lobl)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlobl)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--bl)';
+      }
+      function cctye(){
+        document.documentElement.style.setProperty('--co', 'var(--ye)');
+        document.documentElement.style.setProperty('--loco', 'var(--loye)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mloye)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--ye)';
+      }
+      function cctocbl(){
+        document.documentElement.style.setProperty('--co', 'var(--ocbl)');
+        document.documentElement.style.setProperty('--loco', 'var(--loocbl)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mloocbl)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--ocbl)';
+      }
+      function cctvi(){
+        document.documentElement.style.setProperty('--co', 'var(--vi)');
+        document.documentElement.style.setProperty('--loco', 'var(--lovi)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlovi)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--vi)';
+      }
+      function cctpi(){
+        document.documentElement.style.setProperty('--co', 'var(--pi)');
+        document.documentElement.style.setProperty('--loco', 'var(--lopi)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlopi)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--pi)';
+      }
+      function cctwh(){
+        document.documentElement.style.setProperty('--co', 'var(--wh)');
+        document.documentElement.style.setProperty('--loco', 'var(--lowh)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlowh)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--wh)';
+      }
+      function cctbla(){
+        document.documentElement.style.setProperty('--co', 'var(--bla)');
+        document.documentElement.style.setProperty('--loco', 'var(--lbla)');
+        document.documentElement.style.setProperty('--mloco', 'var(--mlobla)');
+        let bu = document.querySelectorAll('.btn');
+        for(let q = 0; q<=bu.length; q++)
+        bu[q].style.backgroundColor='var(--bla)';
+      }
+    </script>
+  </head>
+  <body>
+    <section class="routine-section">
+      <table id="routine-section__routine-table">
+        <caption class="routine-table__caption">Daily routine</caption>
+        <thead class="routine-table__thead">
+          <tr>
+            <th id="ko">day</th>
+            <th>Subject1</th>
+            <th>Subject2</th>
+            <th>Subject3</th>
+            <th>Subject4</th>
+            <th>Subject5</th>
+            <th>Subject6</th>
+            <th>Subject7</th>
+            <th>Subject8</th>
+            <th>Subject9</th>
+            <th>Subject10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Monday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <th>Saturday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Sunday</th>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+            <td>00:00</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p>Time may vary from season to season.</p>
+    </section>
+    <section class="bse">
+      <button onclick="cctre()" class="btn rebtn">Change color</button>
+      <button onclick="cctgr()" class="btn grbtn">Change color</button>
+      <button onclick="cctbl()" class="btn blbtn">Change color</button>
+      <button onclick="cctye()" class="btn yebtn">Change color</button>
+      <button onclick="cctocbl()" class="btn ocblbtn">Change color</button>
+      <button onclick="cctvi()" class="btn vibtn">Change color</button>
+      <button onclick="cctpi()" class="btn pibtn">Change color</button>
+      <button onclick="cctwh()" class="btn whbtn">Change color</button>
+      <button onclick="cctbla()" class="btn blabtn">Change color</button>
+    </section>
+
+
+  </body>
+</html>
